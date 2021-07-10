@@ -1,0 +1,8 @@
+.formrow {
+    min-height: 50vmax;
+}
+
+.col-4 {
+    border-radius: 1rem;
+    padding: 20px;
+}
