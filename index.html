@@ -19,6 +19,7 @@
     <link href="./style.css" rel="stylesheet">
 
     <script src="./script.js"></script>
+    <script src="./uiscript.js"></script>
 </head>
 
 <body class="bg-primary">
@@ -29,15 +30,42 @@
                 <div class="form-group">
                     <div class="mb-3">
                         <label for="weightFieldLabel" class="form-label">Weight</label>
-                        <input type="number" class="form-control" id="weightInputField" aria-describedby="weightHelp"
-                            placeholder="0" value="0" min="0">
-                        <div id="weightHelp" class="form-text">Enter your weight in kg.</div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <input type="number" class="form-control" id="weightInputField" aria-describedby="weightHelp" placeholder="0" value="0" min="0">
+                            </div>
+                            <div class="col-2">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="weightDropdown" data-bs-toggle="dropdown" aria-expanded="false">kg</button>
+                                    <ul class="dropdown-menu" aria-labelledby="weightDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="setWeightUnit('kg')">kg</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="setWeightUnit('gm')">gm</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="setWeightUnit('lb')">lb</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="weightHelp" class="form-text">Enter your weight.</div>
                     </div>
                     <div class="mb-3">
                         <label for="heightFieldLabel" class="form-label">Height</label>
-                        <input type="number" class="form-control" id="heightInputField" aria-describedby="heightHelp"
-                            placeholder="0" value="0" min="0">
-                        <div id="heightHelp" class="form-text">Enter your height in cm.</div>
+                        <div class="row justify-content-center">
+                            <div class="col-10">
+                                <input type="number" class="form-control" id="heightInputField" aria-describedby="heightHelp" placeholder="0" value="0" min="0">
+                            </div>
+                            <div class="col-2">
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" type="button" id="heightDropdown" data-bs-toggle="dropdown" aria-expanded="false">cm</button>
+                                    <ul class="dropdown-menu" aria-labelledby="heightDropdown">
+                                        <li><a class="dropdown-item" href="#" onclick="setHeightUnit('cm')">cm</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="setHeightUnit('m')">m</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="setHeightUnit('ft')">ft</a></li>
+                                        <li><a class="dropdown-item" href="#" onclick="setHeightUnit('in')">in</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="heightHelp" class="form-text">Enter your height.</div>
                     </div>
                     <div class="row align-items-center">
                         <div class="col-10">
